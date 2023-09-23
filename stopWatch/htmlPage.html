@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0," />
     <link rel="stylesheet"
@@ -12,6 +17,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./cssPage.css">
+    <script src="./javascriptPage.js" defer></script>
     <title>StopWatch</title>
 </head>
 
@@ -20,16 +26,16 @@
         <header>
             <h1>STOPWATCH</h1>
             <h1>VANILA JAVASCRIPT STOPWATCH</h1>
-            <h1>00 : 00</h1>
+            <h1 id="timer">00 : 00</h1>
         </header>
         <footer>
-            <button>
+            <button id="start">
                 <span class="material-symbols-outlined">play_arrow</span>
             </button>
-            <button>
+            <button id="stop">
                 <span class="material-symbols-outlined">stop</span>
             </button>
-            <button>
+            <button id="reset">
                 <span class="material-symbols-outlined">replay</span>
             </button>
         </footer>
