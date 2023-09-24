@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src="./javascript.js"></script>
+    <link rel="stylesheet" href="./cssPage.css">
+    <title>DrumKit</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Javascript Drum Kit</h1>
+            <div>
+                <img src="https://c0.wallpaperflare.com/preview/742/883/724/drums-drum-set-background-music.jpg"
+                    alt="drumkit_image">
+                <button data-key="69" id="crash" class="sounds">E</button>
+                <button data-key="82" id="ride" class="sounds">R</button>
+                <button data-key="70" id="floortom" class="sounds">F</button>
+                <button data-key="71" id="midtom" class="sounds">G</button>
+                <button data-key="72" id="hightom" class="sounds">H</button>
+                <button data-key="74" id="snare" class="sounds">J</button>
+                <button data-key="75" id="hihat" class="sounds">K</button>
+                <button data-key="86" id="kick" class="sounds">V</button>
+                <button data-key="32" id="music">Make Your Own Kind of Music!</button>
+            </div>
+        </section>
+    </main>
+
+    <audio data-key="74"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/snare.wav"></audio>
+    <audio data-key="86"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/kick.wav"></audio>
+    <audio data-key="72"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-high.wav"></audio>
+    <audio data-key="71"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-mid.wav"></audio>
+    <audio data-key="70"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-low.wav"></audio>
+    <audio data-key="69"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/crash.wav"></audio>
+    <audio data-key="82"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/ride.wav"></audio>
+    <audio data-key="75"
+        src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/hihat-close.wav"></audio>
+    <audio data-key="32"
+        src="https://res.cloudinary.com/dw0up71e2/video/upload/v1695541498/Make_Your_Own_Kind_Of_Music-321296_xupwxx.mp3"></audio>
+</body>
+
+</html>
