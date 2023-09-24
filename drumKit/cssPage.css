@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Carter+One&family=Monoton&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rye&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section h1 {
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: 'Rye', cursive;
+    color: #f39e28;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+section div img {
+    width: 35rem;
+    position: relative;
+    z-index: 2;
+}
+
+.sounds {
+    width: 2rem;
+    height: 2rem;
+    font-weight: 600;
+    color: #f7b861;
+    background-color: rgb(205, 57, 57);
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    position: absolute;
+    z-index: 3;
+}
+
+#crash {
+    left: 5rem;
+    top: 4.5rem;
+}
+
+#ride {
+    right: 6.2rem;
+    top: 4rem;
+}
+
+#hihat {
+    top: 10rem;
+    right: 3rem;
+}
+
+#kick {
+    top: 16rem;
+    right: 15.5rem;
+}
+
+#floortom {
+    top: 12rem;
+    left: 10rem;
+}
+
+#midtom {
+    top: 8rem;
+    left: 13.5rem;
+}
+
+#hightom {
+    top: 8.2rem;
+    right: 13rem;
+}
+
+#snare {
+    top: 12.2rem;
+    right: 10.5rem;
+}
+
+#music {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-family: 'Rye', cursive;
+    cursor: pointer;
+    color: #f7b861;
+    background-color: rgb(202, 64, 64);
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    z-index: 4;
+}
+
+.behaviour {
+    transform: scale(1.01);
+}
