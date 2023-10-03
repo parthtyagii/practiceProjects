@@ -8,19 +8,31 @@ boxes.map(b => {
             arr[Math.floor(i / 3)][Math.floor(i % 3)] = 1;
             event.target.innerText = "O";
             event.target.style.backgroundColor = "#ECAF4F";
-            console.log(arr);
             checkIf(computerTurn);
         }
     });
 });
 
-
-//now
 const modalBtn = document.querySelector(".modal button");
 modalBtn.addEventListener("click", () => {
     location.reload();
 });
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+};
+
+const priority = [0, 2, 4, 6, 8];
+const notPriority = [1, 3, 5, 7];
+
+shuffleArray(priority);
+shuffleArray(notPriority);
+
+
+//now
 const modalFunc = (rang, message, btnText) => {
     setTimeout(() => {
         document.querySelector(".modalContainer").style.display = "flex";
@@ -201,7 +213,7 @@ const computerTurn = () => {
         return checkIf(() => { });
     }
 
-    for (let i = 0; i < 9; i += 2) {
+    for (const i of priority) {
         if (arr[Math.floor(i / 3)][Math.floor(i % 3)] === 0) {
             arr[Math.floor(i / 3)][Math.floor(i % 3)] = -1;
             document.querySelector(`span[data-key="${i}"]`).innerText = 'X';
@@ -211,7 +223,7 @@ const computerTurn = () => {
         }
     }
 
-    for (let i = 1; i < 9; i += 2) {
+    for (const i of notPriority) {
         if (arr[Math.floor(i / 3)][Math.floor(i % 3)] === 0) {
             arr[Math.floor(i / 3)][Math.floor(i % 3)] = -1;
             document.querySelector(`span[data-key="${i}"]`).innerText = 'X';
@@ -225,5 +237,5 @@ const computerTurn = () => {
 window.addEventListener("load", (event) => {
     setTimeout(() => {
         computerTurn();
-    }, 300);
+    }, 400);
 });
