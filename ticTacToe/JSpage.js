@@ -16,6 +16,20 @@ boxes.map(b => {
 
 
 //now
+const modalBtn = document.querySelector(".modal button");
+modalBtn.addEventListener("click", () => {
+    location.reload();
+});
+
+const modalFunc = (rang, message, btnText) => {
+    setTimeout(() => {
+        document.querySelector(".modalContainer").style.display = "flex";
+        document.querySelector(".modal").style.backgroundColor = rang;
+        document.querySelector(".modal span").innerText = message;
+        document.querySelector(".modal button").innerText = btnText;
+    }, 200);
+}
+
 const checkIf = (func) => {
     //check for winner
     for (let i = 0; i < 3; i++) {
@@ -24,7 +38,10 @@ const checkIf = (func) => {
             elements.map((el) => {
                 el.style.backgroundColor = "#1cb01ca3";
             });
-            return location.reload();
+
+            if (arr[i][0] === 1) modalFunc("#1cb01c", "Hurray! You Won", "Play Again");
+            if (arr[i][0] === -1) modalFunc("#dc685a", "Sorry! You Lost", "Try Again");
+            return;
         }
     }
 
@@ -34,7 +51,10 @@ const checkIf = (func) => {
             elements.map((el) => {
                 el.style.backgroundColor = "#1cb01ca3";
             });
-            return location.reload();
+
+            if (arr[0][i] === 1) modalFunc("#1cb01c", "Hurray! You Won", "Play Again");
+            if (arr[0][i] === -1) modalFunc("#dc685a", "Sorry! You Lost", "Try Again");
+            return;
         }
     }
 
@@ -43,7 +63,10 @@ const checkIf = (func) => {
         elements.map((el) => {
             el.style.backgroundColor = "#1cb01ca3";
         });
-        return location.reload();
+
+        if (arr[1][1] === 1) modalFunc("#1cb01c", "Hurray! You Won", "Play Again");
+        if (arr[1][1] === -1) modalFunc("#dc685a", "Sorry! You Lost", "Try Again");
+        return;
     }
 
     if (arr[1][1] !== 0 && arr[0][2] === arr[1][1] && arr[1][1] === arr[2][0]) {
@@ -51,7 +74,10 @@ const checkIf = (func) => {
         elements.map((el) => {
             el.style.backgroundColor = "#1cb01ca3";
         });
-        return location.reload();
+
+        if (arr[1][1] === 1) modalFunc("#1cb01c", "Hurray! You Won", "Play Again");
+        if (arr[1][1] === -1) modalFunc("#dc685a", "Sorry! You Lost", "Try Again");
+        return;
     }
 
     // checking for empty
@@ -65,7 +91,8 @@ const checkIf = (func) => {
     }
 
     if (count === 0) {
-        return location.reload();
+        modalFunc("#AD8E70", "No Result!", "Try Again");
+        return;
     }
 
     return setTimeout(() => { func() }, 300);
@@ -196,5 +223,7 @@ const computerTurn = () => {
 }
 
 window.addEventListener("load", (event) => {
-    computerTurn();
+    setTimeout(() => {
+        computerTurn();
+    }, 300);
 });
