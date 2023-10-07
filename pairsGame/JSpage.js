@@ -58,7 +58,37 @@ for (let i = 0; i < 30; i++) {
 
 
 // stop-watch logic...
+const watch = () => {
+    const timer = document.querySelector("nav");
+    let minutes = 0, seconds = 0;
+    let watchMin = "", watchSec = "";
 
+    setInterval(() => {
+        seconds++;
+        if (seconds < 10) {
+            watchSec = "0" + seconds;
+        }
+        else if (seconds < 60) {
+            watchSec = seconds;
+        }
+        else {
+            watchSec = "00";
+            seconds = 0;
+            minutes++;
+        }
+
+        if (minutes < 10) {
+            watchMin = "0" + minutes;
+        }
+        else {
+            watchMin = minutes;
+        }
+
+        timer.innerText = watchMin + " : " + watchSec;
+    }, 1000);
+}
+
+// watch();
 
 
 
