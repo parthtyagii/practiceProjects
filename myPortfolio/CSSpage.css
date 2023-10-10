@@ -28,14 +28,15 @@ nav {
     align-items: center;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: black;
 }
 
 .nav-icon {
     font-size: 1rem;
-    margin-left: 0.8rem;;
+    margin-left: 0.8rem;
+    ;
 }
 
 nav span:nth-of-type(2) {
@@ -43,7 +44,7 @@ nav span:nth-of-type(2) {
     margin-right: 1.8rem;
 }
 
-nav button{
+nav button {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.2rem;
@@ -56,13 +57,12 @@ nav button{
     cursor: pointer;
 }
 
-nav a:nth-of-type(2){
+nav a:nth-of-type(2) {
     margin-left: auto;
     margin-right: 5rem;
 }
 
 main {
-
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@ main {
 /* introduction section... */
 main .introduction {
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     display: flex;
 }
 
@@ -134,6 +134,48 @@ main .introduction .sidebar {
     width: 90%;
     margin-top: 2rem;
 }
+
+.logo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: rgb(145, 145, 145);
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.logo .inner {
+    width: 80%;
+    height: 80%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: rgb(65, 64, 64);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo .inner span:nth-of-type(1) {
+    margin-right: auto;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+.logo .inner span:nth-of-type(2) {
+    margin-left: auto;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+
 
 .introContent .introContentRight {
     width: 50%;
@@ -229,10 +271,10 @@ main .introduction .sidebar {
 .project .rightPart .title {
     width: 100%;
     font-size: 1.8rem;
-    font-weight: 700;   
+    font-weight: 700;
 }
 
-.project .rightPart .title a{
+.project .rightPart .title a {
     text-decoration: none;
 }
 
@@ -294,7 +336,7 @@ footer .personalInfo {
     row-gap: 0.5rem;
 }
 
-footer .personalInfo a{
+footer .personalInfo a {
     text-decoration: none;
     color: white;
 }
@@ -313,7 +355,7 @@ footer .personalInfo span:nth-of-type(2) {
     column-gap: 1rem;
 }
 
-.footer-icons a{
+.footer-icons a {
     text-decoration: none;
     color: white;
 }
@@ -367,7 +409,7 @@ footer .personalInfo span:nth-of-type(2) {
     transition: all 0.2s linear;
 }
 
-.technologies .tech:hover{
+.technologies .tech:hover {
     opacity: 1;
 }
 
