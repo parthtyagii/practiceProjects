@@ -28,14 +28,37 @@ nav {
     align-items: center;
 }
 
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
 .nav-icon {
     font-size: 1rem;
-    margin-left: 0.8rem;
+    margin-left: 0.8rem;;
 }
 
 nav span:nth-of-type(2) {
     margin-left: 1.8rem;
     margin-right: 1.8rem;
+}
+
+nav button{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+nav a:nth-of-type(2){
+    margin-left: auto;
+    margin-right: 5rem;
 }
 
 main {
@@ -66,8 +89,8 @@ main .introduction .sidebar {
     row-gap: 2rem;
 }
 
-.sidebar-icon {
-    cursor: pointer;
+.sidebar a {
+    color: black;
 }
 
 .introduction .introContent {
@@ -121,12 +144,6 @@ main .introduction .sidebar {
 }
 
 .introContent .introContentRight span {
-    width: 70%;
-    height: 70%;
-    /* border: 1px solid black; */
-    border-radius: 100%;
-    overflow: hidden;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +151,8 @@ main .introduction .sidebar {
 
 .introContent .introContentRight span img {
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* projects sections... */
@@ -211,7 +229,11 @@ main .introduction .sidebar {
 .project .rightPart .title {
     width: 100%;
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 700;   
+}
+
+.project .rightPart .title a{
+    text-decoration: none;
 }
 
 .project .rightPart .description {
@@ -272,6 +294,11 @@ footer .personalInfo {
     row-gap: 0.5rem;
 }
 
+footer .personalInfo a{
+    text-decoration: none;
+    color: white;
+}
+
 footer .personalInfo span:nth-of-type(2) {
     font-size: 1.2rem;
     font-weight: 600;
@@ -286,8 +313,9 @@ footer .personalInfo span:nth-of-type(2) {
     column-gap: 1rem;
 }
 
-.footer-icons i {
-    cursor: pointer;
+.footer-icons a{
+    text-decoration: none;
+    color: white;
 }
 
 /* skills */
@@ -296,7 +324,7 @@ footer .personalInfo span:nth-of-type(2) {
     height: auto;
     padding-top: 2rem;
     padding-bottom: 5rem;
-    background-color: rgb(23, 23, 23);
+    /* background-color: rgb(23, 23, 23); */
 
     display: flex;
     flex-direction: column;
@@ -308,7 +336,7 @@ footer .personalInfo span:nth-of-type(2) {
 .skillSection .heading {
     justify-content: center;
     padding: 0;
-    color: white;
+    /* color: white; */
 }
 
 .skillSection .technologies {
@@ -327,7 +355,7 @@ footer .personalInfo span:nth-of-type(2) {
 .technologies .tech {
     font-size: 1rem;
     font-weight: 600;
-    color: white;
+    /* color: white; */
     opacity: 0.5;
 
     display: flex;
