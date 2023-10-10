@@ -2,16 +2,14 @@
 
 
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -19,9 +17,8 @@ body {
 }
 
 nav {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
-    /* background-color: aquamarine; */
     padding-left: 12rem;
     font-size: 1rem;
     font-weight: 600;
@@ -42,14 +39,17 @@ nav span:nth-of-type(2) {
 }
 
 main {
+
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
 }
 
+/* introduction section... */
 main .introduction {
-    width: 100vw;
+    width: 100%;
     height: 90vh;
     display: flex;
 }
@@ -70,27 +70,25 @@ main .introduction .sidebar {
     cursor: pointer;
 }
 
-main .introduction .introContent {
+.introduction .introContent {
     display: flex;
     flex: 1;
 }
 
-main .introduction .introContent .introContentLeft {
+.introContent .introContentLeft {
     width: 50%;
     height: 100%;
-    padding-top: 2rem;
     padding-left: calc(12rem - 8vw);
 
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     row-gap: 1rem;
 }
 
 .name {
     width: 90%;
-    /* background-color: rgb(169, 169, 169); */
     font-size: 3.2rem;
     font-weight: 800;
 
@@ -104,17 +102,17 @@ main .introduction .introContent .introContentLeft {
     margin-left: 5rem;
 }
 
-.profession{
+.profession {
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.about{
+.about {
     width: 90%;
     margin-top: 2rem;
 }
 
-main .introduction .introContent .introContentRight {
+.introContent .introContentRight {
     width: 50%;
     height: 100%;
     display: flex;
@@ -122,16 +120,230 @@ main .introduction .introContent .introContentRight {
     align-items: center;
 }
 
-main .introduction .introContent .introContentRight span{
+.introContent .introContentRight span {
     width: 70%;
     height: 70%;
-    background-color: pink;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 100%;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main .introduction .introContent .introContentRight span img{
+.introContent .introContentRight span img {
     width: 100%;
     object-fit: cover;
+}
+
+/* projects sections... */
+.projectSection {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.heading {
+    width: 100%;
+    height: 15vh;
+    padding-left: 12rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.projectSection .projects {
+    width: 100%;
+    padding-left: calc(12rem);
+    padding-right: calc(12rem);
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.projects .project {
+    width: 80%;
+    min-height: 10rem;
+    border: 1px solid black;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.project .leftPart {
+    width: 50%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.project .leftPart video {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.project .rightPart {
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.project .rightPart .title {
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.project .rightPart .description {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project .rightPart .technologies {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project .rightPart .technologies span {
+    background-color: cornflowerblue;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    background-color: rgb(23, 23, 23);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+footer h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+footer .personalInfo {
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+}
+
+footer .personalInfo span:nth-of-type(2) {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-icons {
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.footer-icons i {
+    cursor: pointer;
+}
+
+/* skills */
+.skillSection {
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background-color: rgb(23, 23, 23);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+}
+
+.skillSection .heading {
+    justify-content: center;
+    padding: 0;
+    color: white;
+}
+
+.skillSection .technologies {
+    width: 100%;
+    padding-left: calc(12rem);
+    padding-right: calc(12rem);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 5rem;
+}
+
+.technologies .tech {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    opacity: 0.5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.3rem;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.technologies .tech:hover{
+    opacity: 1;
+}
+
+.technologies .tech img {
+    width: 7rem;
+    height: 7rem;
 }
