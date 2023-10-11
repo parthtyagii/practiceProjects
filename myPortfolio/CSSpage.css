@@ -39,7 +39,6 @@ nav a {
 .nav-icon {
     font-size: 1rem;
     margin-left: 0.8rem;
-    ;
 }
 
 nav span:nth-of-type(2) {
@@ -203,7 +202,7 @@ main .introduction .sidebar {
 /* projects sections... */
 .projectSection {
     width: 100%;
-    padding-top: 2rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 
     display: flex;
@@ -246,8 +245,8 @@ main .introduction .sidebar {
     display: flex;
 }
 
-.project:nth-of-type(2){
-    background-color: #F06D55; 
+.project:nth-of-type(2) {
+    background-color: #F06D55;
     color: white;
 }
 
@@ -271,6 +270,8 @@ main .introduction .sidebar {
     width: 50%;
     height: 100%;
     padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -317,11 +318,11 @@ main .introduction .sidebar {
     padding-bottom: 0.5rem;
 }
 
-.project:nth-of-type(2) .rightPart .technologies span{
+.project:nth-of-type(2) .rightPart .technologies span {
     background-color: black;
 }
 
-.project:nth-of-type(2) .rightPart a{
+.project:nth-of-type(2) .rightPart a {
     color: white;
 }
 
@@ -383,7 +384,7 @@ footer .personalInfo span:nth-of-type(2) {
 .skillSection {
     width: 100%;
     height: auto;
-    padding-top: 2rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 
     display: flex;
@@ -435,4 +436,143 @@ footer .personalInfo span:nth-of-type(2) {
 .technologies .tech img {
     width: 7rem;
     height: 7rem;
+}
+
+/* Responsive Designs */
+@media (max-width:480px) {
+    nav{
+        padding: 1rem;
+        font-size: 0.5rem;
+    }
+
+    .nav-icon{
+        font-size: 0.6rem;
+        margin-left: 0.3rem;
+    }
+
+    nav span:nth-of-type(2) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    nav a:nth-of-type(2){
+        margin: 0;
+        margin-left: auto;
+    }
+
+    nav button{
+        font-size: 0.6rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    /* introduction */
+    main{
+        padding: 1rem;
+    }
+
+    main .introduction{
+        height: auto;
+    }
+
+    main .introduction .sidebar{
+        display: none;
+    }
+
+    main .introduction .introContent{
+        flex-direction: column-reverse;
+    }
+
+    .introContent .introContentLeft, .introContent .introContentRight{
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .introContent .introContentLeft .name{
+        width: auto;
+        justify-content: center;
+        font-size: 3.2rem;
+    }
+
+    .introContentLeft .about{
+        width: 100%;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .introContent .introContentRight span img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    /* Projects */
+    .projectSection .heading{
+        padding: 0;
+        justify-content: center;
+    }
+
+    .projectSection .projects{
+        padding: 0;
+    }
+
+    .projects .project{
+        width: 100%;
+    }
+
+    .project .rightPart{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .project .rightPart .title{
+        font-size: 1.2rem;
+    }
+
+    .project .rightPart .description{
+        font-size: 0.7rem;
+    }
+
+    .project .rightPart .technologies span{
+        font-size: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .skillSection .heading{
+        font-size: 2rem;
+    }
+
+    .skillSection .technologies{
+        padding: 0;
+    }
+
+    .technologies .tech img{
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    /* footer  */
+    footer h2{
+        font-size: 1.5rem;
+    }
+
+    footer .personalInfo{
+        font-size: 0.7rem;
+    }
+
+    footer .personalInfo span:nth-of-type(2){
+        font-size: 0.9rem;
+    }
+
+    .footer-icons{
+        font-size: 1.3rem;
+    }
+
 }
